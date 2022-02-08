@@ -3,3 +3,6 @@ def add_two(x):
 
 def triple(y):
     return y*2
+
+def divide_by_ten(z):
+    return float(z)/10
