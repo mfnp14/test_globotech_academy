@@ -1,6 +1,5 @@
 import module
 import classes
-import sys
 from random import randint
 from time import sleep
 
@@ -11,8 +10,7 @@ if __name__ == "__main__":
     while n_participants not in [2, 3, 4]:
         n_participants = input('Invalid Entry. Do you wish to continue?\n (Type in a number or N)')
         if n_participants.lower() == 'n':
-            print('Game over.')
-            sys.exit(0)
+            module.end_game()
     
     print('{} participants will play!'.format(n_participants))
 
@@ -51,7 +49,7 @@ if __name__ == "__main__":
             else:
                 print('Repeated letter.\n')
             print(blanks_list)
-            
+    
 
         print('--- End of round {} ---'.format(round))
         for player in players:
@@ -65,7 +63,7 @@ if __name__ == "__main__":
             yn = input('Have all words been guessed? (Y/N)')
         
         if yn.lower() == 'y':
-            print('Game Over.')
+            print('Final score.')
             for i in range(n_participants):
                 players[i].print_score()
-            sys.exit(0)
+            module.end_game()

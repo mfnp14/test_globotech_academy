@@ -1,9 +1,10 @@
 from random import randint
+from sys import exit
 
 
 def end_game():
     print('Game Over.')
-    return
+    exit(0)
 
 
 def select_words():
@@ -16,6 +17,6 @@ def select_words():
     for i in range(3):
         random_num = randint(0,len(total_words)-1)
         if len(total_words[random_num]) == 7 and total_words[random_num] not in word_list:
-            word_list.append(total_words[random_num])
+            word_list.append(total_words[random_num].lower())
     
     return word_list
