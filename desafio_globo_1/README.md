@@ -6,5 +6,7 @@ python main.py
 
 A forma de jogar é bastante intuitiva e os dados entrados pelo(s) usuário(s) são explicitamente pedidos na linha de comando, fazendo com que seja simples a usabilidade.
 
+Obs. O arquivo de common-7-letter-words.txt foi obtido do repo https://github.com/powerlanguage/word-lists
+
 Aproveite!
 
